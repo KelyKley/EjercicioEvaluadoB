@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<center>
+  <table border="2" cellpadding="5" width="40%">
+<tr>
+<td width="10%">4</td>
+<td width="10%">8</td>
+<td width="10%">12</td>
+<td width="10%">16</td>
+<td width="10%">20</td>
+<td width="10%">24</td>
+<td width="10%">28</td>
+<td width="10%">32</td>
+</tr>
+
+<tr>
+<td width="10%">3</td>
+<td width="10%">7</td>
+<td width="10%">11</td>
+<td width="10%">15</td>
+<td width="10%">19</td>
+<td width="10%">23</td>
+<td width="10%">27</td>
+<td width="10%">31</td>
+</tr>
+
+<tr>
+<td width="10%">2</td>
+<td width="10%">6</td>
+<td width="10%">10</td>
+<td width="10%">14</td>
+<td width="10%">18</td>
+<td width="10%">22</td>
+<td width="10%">26</td>
+<td width="10%">30</td>
+</tr>
+
+<tr>
+<td width="10%">1</td>
+<td width="10%">5</td>
+<td width="10%">9</td>
+<td width="10%">13</td>
+<td width="10%">17</td>
+<td width="10%">21</td>
+<td width="10%">25</td>
+<td width="10%">29</td>
+</tr>
+</table>
+</center>
+<form action="">
+	<h2>Buscar pasajero:</h2>
+	<p>DNI : <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><input type="button" name="" value="Buscar"></p>
+
+	<h3>Nombre:</h3>
+		<input id="name" placeholder="Ingresa tu nombre" required>
+	<h3>Apellido:</h3>
+		<input id="address" placeholder="Ingresa tu apellido" required>
+	<h3>DNI:</h3>
+		<input id="dni" type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+	<p>
+		<input type="button" name="" value="Reservar" onclick="reservar();">
+		<input type="reset" name="" value="Cancelar">
+
+	</p>
+	<p>
+		<input type="button" name="" value="Listar">
+	</p>
+  <div id="mostrar"></div>
+    <script src="js/main.js"></script>
+<h2>Registro de Reserva</h2>
+
+	<div id="mostrarNombre"></div>
+</form>
+</body>
+</html>
+
+<!--<input type="text" id="c" style="width:300px;height:30px"></td> 
+<div type="text" id="rpta"> </div> 
+
+<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+
+>
