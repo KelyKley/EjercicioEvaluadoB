@@ -16,7 +16,8 @@ function redirect(event){
 	var asiento = parseInt(numAsientos);
     var obj = asientos[asiento - 1];
 
-    console.log (obj.nombre);
+    //console.log (obj.nombre);
+
 }
 
    var N = 32; // Número de asientos
@@ -30,15 +31,26 @@ function reservar(){
 	var nombre = document.getElementById("name").value;
 	var address= document.getElementById("address").value;
 	var dni = document.getElementById("dni").value;
-	var mostrarReserva = document.getElementById("mostrarNombre").innerHTML="<strong>"+"Nombre del pasajero: "+"</strong>"+nombre+" "+address+"<br>"+"<strong>"+"Número de DNI : "+"</strong>"+dni + "<br>" +"<strong>"+ "Asiento Reservado : "+"</strong>"+asiento + "<br>";
+	document.getElementById("mostrarNombre").innerHTML="<strong>Nombre del pasajero: </strong>"+nombre+" "+address+
+				"<br> <strong>Número de DNI : </strong>"+dni + 
+				"<br><strong>Asiento Reservado : </strong>"+asiento + "<br>";
 	asientos[asiento - 1]={
 		nombre:nombre,
 		apellido:address,
 		dni:dni
 	}
-	console.log(asientos);
+	//console.log(asientos);
 }
 reservar();
 
-
-
+function listar(){
+	html="<table>";
+	for(var i=0; i<=asientos.length; i++){
+		if(asientos[i]!= undefined){
+			html+="<tr><td>"+asientos[i].nombre+"</td>"+
+					"<td>"+asientos[i].apellido+"</td></tr>";
+		}
+	}
+	html+="</table>";
+	document.getElementById("listar").innerHTML=html;
+}
