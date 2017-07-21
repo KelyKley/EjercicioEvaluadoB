@@ -12,6 +12,11 @@ function redirect(event){
     //    var asiento=(event.target.textContent);
     //var mostrar=document.getElementById("mostrar");
     //mostrar.innerHTML=asiento;
+
+	var asiento = parseInt(numAsientos);
+    var obj = asientos[asiento - 1];
+
+    console.log (obj.nombre);
 }
 
    var N = 32; // Número de asientos
@@ -21,12 +26,12 @@ function redirect(event){
   }
 
 function reservar(){
-	var asiento = numAsientos;
+	var asiento = parseInt(numAsientos);
 	var nombre = document.getElementById("name").value;
 	var address= document.getElementById("address").value;
 	var dni = document.getElementById("dni").value;
 	var mostrarReserva = document.getElementById("mostrarNombre").innerHTML="<strong>"+"Nombre del pasajero: "+"</strong>"+nombre+" "+address+"<br>"+"<strong>"+"Número de DNI : "+"</strong>"+dni + "<br>" +"<strong>"+ "Asiento Reservado : "+"</strong>"+asiento + "<br>";
-	asientos[numAsientos]={
+	asientos[asiento - 1]={
 		nombre:nombre,
 		apellido:address,
 		dni:dni
@@ -34,3 +39,6 @@ function reservar(){
 	console.log(asientos);
 }
 reservar();
+
+
+
