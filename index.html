@@ -7,6 +7,7 @@
 </head>
 <body>
 <center>
+<h1>Reserve su asiento</h1>
   <table border="2" cellpadding="5" width="40%">
 <tr>
 <td width="10%">4</td>
@@ -53,9 +54,14 @@
 </tr>
 </table>
 
+    <script src="assets/js/main.js"></script>
+  <div id="mostrar"></div>
+
 <form action="">
 	<h2>Buscar pasajero:</h2>
-	<p>DNI : <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><input type="button" name="" value="Buscar"></p>
+	<p>DNI : <input id="buscarDni" type="" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><input type="button" name="" value="Buscar" onclick="buscar();"></p>
+		<h4>Se encontro :</h4>
+		<table border="" cellpadding="10"  width="300px" bgcolor="white"><tr><td><div id="pasajeroBuscado"></div></td></tr></table>
 
 	<h3>Nombre:</h3>
 		<input id="name" placeholder="Ingresa tu nombre" required>
@@ -71,13 +77,14 @@
 	<p>
 		<input type="button" name="" value="Listar" onclick="listar();">
 	</p>
-  <div id="mostrar"></div>
-    <script src="assets/js/main.js"></script>
-<h2>Registro de Reserva</h2>
 
-	<div id="mostrarNombre"></div>
+	<h2>Registro de Reserva</h2>
+		<table border="" cellpadding="10"  width="300px" bgcolor="white"><tr><td><div id="mostrarNombre"></div></td></tr></table>
+	
 	<h2>Pasajeros Registrados</h2>
-	<div id="listar"></div>
+		<table border="" cellpadding="10"  width="300px" bgcolor="white"><tr><td><div id="listar"></div>
+</td></tr></table>
+
 </form>
 </center>
 </body>

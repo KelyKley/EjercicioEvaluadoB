@@ -1,8 +1,9 @@
 *{
-	font-style: helvetica;
+  margin: 5px;
 }
 
 body{
 	background-color: #FFEBCD;
-	text-align: center;
+	font-family: sans-serif;
 }
+

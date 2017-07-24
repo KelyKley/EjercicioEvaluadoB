@@ -1,5 +1,4 @@
 
-
 var celdas = document.getElementsByTagName('td');
 for (var i = 0; i < celdas.length; i++) {
     celdas[i].addEventListener('click',redirect,false);
@@ -41,7 +40,6 @@ function reservar(){
 	}
 	//console.log(asientos);
 }
-reservar();
 
 function listar(){
 	html="<table>";
@@ -53,4 +51,21 @@ function listar(){
 	}
 	html+="</table>";
 	document.getElementById("listar").innerHTML=html;
+}
+
+function buscar(){
+	var buscar = document.getElementById("buscar");
+	var dni = document.getElementById("buscarDni").value;
+
+	for(var i in asientos){
+		 if(asientos[i] != undefined && asientos[i].dni==dni){          
+		 var asiento = parseInt(i)+1;          
+		 var nombreBuscado =asientos[i].nombre;          
+		 var apellidoBuscado=asientos[i].apellido; 
+		 var dniBuscado=asientos[i].dni;       
+		document.getElementById("pasajeroBuscado").innerHTML= "<strong>Pasajero: </strong>"+ nombreBuscado+" "+apellidoBuscado +"<br>"+
+															"<strong>Número de DNI: </strong>"+ dniBuscado+"<br>"
+															 +"<strong>Asiento número : </strong>" + asiento;
+	}
+}
 }
