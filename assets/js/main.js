@@ -54,7 +54,6 @@ function listar(){
 }
 
 function buscar(){
-	var buscar = document.getElementById("buscar");
 	var dni = document.getElementById("buscarDni").value;
 
 	for(var i in asientos){
